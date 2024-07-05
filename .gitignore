@@ -1,0 +1,24 @@
+# Visual Studio specific
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.ipch
+*.pdb
+*.obj
+*.exe
+*.log
+*.sdf
+*.opensdf
+*.tlog
+*.idb
+*.lastbuildstate
+
+# Build directories
+Debug/
+Release/
+x64/Debug/
+x64/Release/
+
+# Package directories
+*.nuget/
