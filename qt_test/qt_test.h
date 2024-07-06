@@ -11,6 +11,9 @@ public:
     qt_test(QWidget *parent = nullptr);
     ~qt_test();
 
+private slots:
+    void onButtonClicked();
+
 private:
     Ui::qt_testClass ui;
 };

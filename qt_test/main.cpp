@@ -1,28 +1,15 @@
-#include <pybind11/embed.h> // ÒıÈëpybind11µÄÇ¶ÈëÊ½½âÊÍÆ÷
+ï»¿#include <pybind11/embed.h> // å¼•å…¥pybind11çš„åµŒå…¥å¼è§£é‡Šå™¨
 #include <iostream>
 #include <QApplication>
 #include "qt_test.h"
+#include <pybind11/embed.h> // åŒ…å«pybind11å¤´æ–‡ä»¶
 
 namespace py = pybind11;
 
 int main(int argc, char* argv[]) {
-    QApplication app(argc, argv);
-
-    // ³õÊ¼»¯Python½âÊÍÆ÷
+    // åˆå§‹åŒ– Python è§£é‡Šå™¨
     py::scoped_interpreter guard{};
-
-    try {
-        // µ¼ÈëPython½Å±¾
-        py::module test_script = py::module::import("test_script");
-
-        // µ÷ÓÃPythonº¯Êı
-        test_script.attr("hello")();
-
-    }
-    catch (const py::error_already_set& e) {
-        std::cerr << "Python error: " << e.what() << std::endl;
-    }
-
+    QApplication app(argc, argv);
     qt_test w;
     w.show();
 
