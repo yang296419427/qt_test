@@ -21,6 +21,16 @@ void qt_test::onButtonClicked() {
     //qDebug() << "Input 2:" << input2Text;
 
     try {
+        // 导入 sys 模块
+        py::module sys = py::module::import("sys");
+        // 获取应用程序路径
+        QString appDirPath = QApplication::applicationDirPath();
+        // 设置 Python 模块搜索路径
+        QString pythonPath = appDirPath + "/python";
+        sys.attr("path").attr("append")(pythonPath.toStdString());
+
+        QString scriptsPath = appDirPath + "/scripts";
+        sys.attr("path").attr("append")(scriptsPath.toStdString());
         // 导入Python脚本
         py::module test_script = py::module::import("test_script");
         //qDebug() << "Python script imported successfully.";
