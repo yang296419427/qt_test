@@ -3,6 +3,6 @@ def hello():
    
 def add(a,b):
     try:
-        return str(int(a) + int(b))
+        return str(float(a) + float(b))
     except ValueError as e:
         return f"Error: {str(e)}"
