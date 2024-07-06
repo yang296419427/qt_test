@@ -1,8 +1,8 @@
-﻿#include <pybind11/embed.h> // 引入pybind11的嵌入式解释器
+﻿#include <pybind11/embed.h> 
 #include <iostream>
 #include <QApplication>
 #include "qt_test.h"
-#include <pybind11/embed.h> // 包含pybind11头文件
+
 
 namespace py = pybind11;
 

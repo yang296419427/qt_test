@@ -17,8 +17,7 @@ void qt_test::onButtonClicked() {
     // 获取输入框内容
     QString input1Text = ui.num1->text();
     QString input2Text = ui.num2->text();
-    //qDebug() << "Input 1:" << input1Text;
-    //qDebug() << "Input 2:" << input2Text;
+
 
     try {
         // 导入 sys 模块
